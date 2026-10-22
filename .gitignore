@@ -1,0 +1,14 @@
+# Obsidian config
+.obsidian
+
+# Trash & System files
+.trash
+
+# Specific project folders
+Private
+
+.obsidian/plugins/
+
+.obsidian/workspace.json
+
+.obsidian/workspace-mobile.json
