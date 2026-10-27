@@ -3,12 +3,26 @@
 Software Design 1 (SDN150S) Project Brief
 Due Date – November 08, 2026
 
+## Team Members
+
+| Slot  | Name                  | Student No. | GitHub Profile                                                    | **Status / Role** |
+| :---: | :-------------------- | :---------- | :---------------------------------------------------------------- | :---------------- |
+| **1** | Etienne Roux          | 260041637   | [RouxTronics](https://github.com/RouxTronics)                     |                   |
+| **2** | Garison Pieters       | 222535164   | [LinkCloudCT](https://github.com/LinkCloudCT)                     |                   |
+| **3** | Jonathan Strauss      | 260083607   | [JohnnyJoestr](https://github.com/JohnnyJoestr)                   |                   |
+| **4** | Henning Myburgh       | 260403237   | [Henning-apx007](https://github.com/Henning-apx007)               |                   |
+| **5** | Joshua Isaacs         | 261755692   | [joshuai582-stack](https://github.com/joshuai582-stack)           |                   |
+| **6** | Robert Erady          |             | [robitiii](https://github.com/robitiii)                           |                   |
+| **7** | Sinovuyo Asathi Danca |             | [sinovuyo-asathi-danca](https://github.com/sinovuyo-asathi-danca) |                   |
+| **8** |                       |             |                                                                   |                   |
+
+---
 ## Instructions 
 
 • Write a technical report of not more than 2000 words to management, discussing your approach to
 the implementation of the assigned mini project. (Font: Cabri 11, Line space: 1.5, Citation: Harvard style)
 • The report should have an introduction, sub-questions, discussions, result/analysis, and conclusion
-section. Discuss your chosen software design approach, engineering method, skills, and tools used for
+section. Discuss your chosen software design approach, engineering method, skills, and tools used forp
 implementation.
 • The report should contain a pseudocode, a UML class or activity diagram, and java program.
 • Kindly note that your java program must be implemented using the following established concepts:
@@ -55,19 +69,5 @@ The Currency Converter is a piece of software that allows you to convert currenc
 These currency converters are commonly accessed for free on the Internet, and they can swiftly convert the value of one currency to another, such as dollars to pounds, rand to dollar, and back. 
 
 **Your team have been tasked with designing a Java program that converts 10 cryptocurrency pairs (e.g., BTC/ETH, BTC/LTC, etc.).**
-
----
-## Team Members
-
-| Slot  | Name                  | Student No. | GitHub Profile                                                    | **Status / Role** |
-| :---: | :-------------------- | :---------- | :---------------------------------------------------------------- | :---------------- |
-| **1** | Etienne Roux          | 260041637   | [RouxTronics](https://github.com/RouxTronics)                     |                   |
-| **2** | Garison Pieters       | 222535164   | [LinkCloudCT](https://github.com/LinkCloudCT)                     |                   |
-| **3** | Jonathan Strauss      | 260083607   | [JohnnyJoestr](https://github.com/JohnnyJoestr)                   |                   |
-| **4** | Henning Myburgh       | 260403237   | [Henning-apx007](https://github.com/Henning-apx007)               |                   |
-| **5** | Joshua Isaacs         | 261755692   | [joshuai582-stack](https://github.com/joshuai582-stack)           |                   |
-| **6** | Robert Erady          |             | [robitiii](https://github.com/robitiii)                           |                   |
-| **7** | Sinovuyo Asathi Danca |             | [sinovuyo-asathi-danca](https://github.com/sinovuyo-asathi-danca) |                   |
-| **8** |                       |             |                                                                   |                   |
 
 ---
