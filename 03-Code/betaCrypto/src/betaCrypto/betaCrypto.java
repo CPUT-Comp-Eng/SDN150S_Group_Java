@@ -4,15 +4,43 @@
 */
 
 package betaCrypto;
+// Imports 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 public class betaCrypto extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(betaCrypto.class.getName());
-
+    
+    private static final Map<String, BigDecimal> USD_RATES = new LinkedHashMap<>();
+    static {
+        USD_RATES.put("BTC",  new BigDecimal("68000"));
+        USD_RATES.put("ETH",  new BigDecimal("2500"));
+        USD_RATES.put("USDT", new BigDecimal("1"));
+        USD_RATES.put("BNB",  new BigDecimal("600"));
+        USD_RATES.put("SOL",  new BigDecimal("160"));
+        USD_RATES.put("XRP",  new BigDecimal("0.55"));
+        USD_RATES.put("ADA",  new BigDecimal("0.40"));
+        USD_RATES.put("DOGE", new BigDecimal("0.12"));
+        USD_RATES.put("USD",  new BigDecimal("1"));
+        USD_RATES.put("ZAR",  new BigDecimal("0.055"));
+    }
+    private static final String[] CODES = USD_RATES.keySet().toArray(new String[0]);
+    
     /**
      * Creates new form betaCrypto
      */
     public betaCrypto() {
         initComponents();
+        jFromSelector.setModel(new javax.swing.DefaultComboBoxModel<>(CODES));
+        jToSelector.setModel(new javax.swing.DefaultComboBoxModel<>(CODES));
+        jFromSelector.setSelectedItem("BTC");
+        jToSelector.setSelectedItem("USD");
+        jConvertOutput.setEditable(false);
+        getRootPane().setDefaultButton(jConvertButton); // Enter = Convert
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -71,6 +99,7 @@ public class betaCrypto extends javax.swing.JFrame {
         jToSelector.addActionListener(this::jToSelectorActionPerformed);
 
         jFromSelector.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jFromSelector.addActionListener(this::jFromSelectorActionPerformed);
 
         jFromLabel.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         jFromLabel.setText("From:");
@@ -226,10 +255,14 @@ public class betaCrypto extends javax.swing.JFrame {
         // Reset Button handling code
         jAmountInput.setText("");
         jConvertOutput.setText("");
-        jFromSelector.setSelectedIndex(0);
-        jToSelector.setSelectedIndex(0);
+        jFromSelector.setSelectedItem("ZAR");
+        jToSelector.setSelectedItem("BTC");
         jAmountInput.requestFocusInWindow();
     }//GEN-LAST:event_jResetButtonActionPerformed
+
+    private void jFromSelectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFromSelectorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFromSelectorActionPerformed
 
     /**
      * @param args the command line arguments
