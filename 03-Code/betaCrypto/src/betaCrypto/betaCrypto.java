@@ -115,6 +115,7 @@ public class betaCrypto extends javax.swing.JFrame {
         jConvertButton.setText("Convert");
 
         jResetButton.setText("Reset");
+        jResetButton.addActionListener(this::jResetButtonActionPerformed);
 
         javax.swing.GroupLayout jButtonPanelLayout = new javax.swing.GroupLayout(jButtonPanel);
         jButtonPanel.setLayout(jButtonPanelLayout);
@@ -220,6 +221,15 @@ public class betaCrypto extends javax.swing.JFrame {
             System.exit(0);
         }
     }//GEN-LAST:event_jExitButtonActionPerformed
+
+    private void jResetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jResetButtonActionPerformed
+        // Reset Button handling code
+        jAmountInput.setText("");
+        jConvertOutput.setText("");
+        jFromSelector.setSelectedIndex(0);
+        jToSelector.setSelectedIndex(0);
+        jAmountInput.requestFocusInWindow();
+    }//GEN-LAST:event_jResetButtonActionPerformed
 
     /**
      * @param args the command line arguments
