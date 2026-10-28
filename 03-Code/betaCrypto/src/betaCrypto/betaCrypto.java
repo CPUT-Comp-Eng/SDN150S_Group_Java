@@ -142,6 +142,7 @@ public class betaCrypto extends javax.swing.JFrame {
         jExitButton.addActionListener(this::jExitButtonActionPerformed);
 
         jConvertButton.setText("Convert");
+        jConvertButton.addActionListener(this::jConvertButtonActionPerformed);
 
         jResetButton.setText("Reset");
         jResetButton.addActionListener(this::jResetButtonActionPerformed);
@@ -263,6 +264,38 @@ public class betaCrypto extends javax.swing.JFrame {
     private void jFromSelectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFromSelectorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jFromSelectorActionPerformed
+
+    private void jConvertButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jConvertButtonActionPerformed
+        // TODO add your handling code here:
+        String text = jAmountInput.getText().trim();
+        if (text.isEmpty()) {
+            showError("Enter an amount.");
+            return;
+        }
+        try {
+            BigDecimal amount = new BigDecimal(text);
+            if (amount.signum() < 0) {
+                showError("Amount cannot be negative.");
+                return;
+            }
+            String from = (String) jFromSelector.getSelectedItem();
+            String to = (String) jToSelector.getSelectedItem();
+            BigDecimal result = convert(amount, from, to);
+            jConvertOutput.setText(result.stripTrailingZeros().toPlainString() + " " + to);
+        } catch (NumberFormatException ex) {
+            showError("Amount must be a number, e.g. 0.5 or 100.");
+        }
+    }
+
+    private BigDecimal convert(BigDecimal amount, String from, String to) {
+        BigDecimal usd = amount.multiply(USD_RATES.get(from));
+        return usd.divide(USD_RATES.get(to), 8, RoundingMode.HALF_UP);
+    }
+
+    private void showError(String msg) {
+        javax.swing.JOptionPane.showMessageDialog(this, msg, "Input error",
+                javax.swing.JOptionPane.ERROR_MESSAGE);
+    }//GEN-LAST:event_jConvertButtonActionPerformed
 
     /**
      * @param args the command line arguments
