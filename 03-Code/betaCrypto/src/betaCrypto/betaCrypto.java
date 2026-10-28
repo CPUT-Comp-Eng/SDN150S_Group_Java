@@ -31,14 +31,14 @@ public class betaCrypto extends javax.swing.JFrame {
         jTitlePanel = new javax.swing.JPanel();
         jTitleLabel = new javax.swing.JLabel();
         jSelectorPanel = new javax.swing.JPanel();
-        jToSelecter = new javax.swing.JComboBox<>();
+        jToSelector = new javax.swing.JComboBox<>();
         jFromSelector = new javax.swing.JComboBox<>();
         jFromLabel = new javax.swing.JLabel();
         jToLabel = new javax.swing.JLabel();
         jButtonPanel = new javax.swing.JPanel();
-        jConvertButton = new javax.swing.JToggleButton();
-        jExitButton = new javax.swing.JToggleButton();
-        jResetButton = new javax.swing.JToggleButton();
+        jExitButton = new javax.swing.JButton();
+        jConvertButton = new javax.swing.JButton();
+        jResetButton = new javax.swing.JButton();
         jInOutPanel = new javax.swing.JPanel();
         jAmountLabel = new javax.swing.JLabel();
         jConvertionLabel = new javax.swing.JLabel();
@@ -71,8 +71,8 @@ public class betaCrypto extends javax.swing.JFrame {
 
         jSelectorPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jToSelecter.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jToSelecter.addActionListener(this::jToSelecterActionPerformed);
+        jToSelector.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jToSelector.addActionListener(this::jToSelectorActionPerformed);
 
         jFromSelector.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -94,7 +94,7 @@ public class betaCrypto extends javax.swing.JFrame {
                 .addGap(18, 160, Short.MAX_VALUE)
                 .addGroup(jSelectorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jToLabel)
-                    .addComponent(jToSelecter, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jToSelector, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37))
         );
         jSelectorPanelLayout.setVerticalGroup(
@@ -107,15 +107,16 @@ public class betaCrypto extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jSelectorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jFromSelector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToSelecter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jToSelector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(155, 155, 155))
         );
 
         jButtonPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jConvertButton.setText("Convert");
-
         jExitButton.setText("Exit");
+        jExitButton.addActionListener(this::jExitButtonActionPerformed);
+
+        jConvertButton.setText("Convert");
 
         jResetButton.setText("Reset");
 
@@ -123,24 +124,24 @@ public class betaCrypto extends javax.swing.JFrame {
         jButtonPanel.setLayout(jButtonPanelLayout);
         jButtonPanelLayout.setHorizontalGroup(
             jButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jButtonPanelLayout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(jResetButton, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(87, 87, 87)
-                .addComponent(jConvertButton)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jButtonPanelLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jResetButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jConvertButton)
+                .addGap(76, 76, 76)
                 .addComponent(jExitButton)
-                .addGap(53, 53, 53))
+                .addGap(51, 51, 51))
         );
         jButtonPanelLayout.setVerticalGroup(
             jButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jButtonPanelLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(35, 35, 35)
                 .addGroup(jButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jExitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jConvertButton, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jResetButton, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25))
+                    .addComponent(jResetButton)
+                    .addComponent(jConvertButton)
+                    .addComponent(jExitButton))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         jInOutPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -210,9 +211,19 @@ public class betaCrypto extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jToSelecterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToSelecterActionPerformed
+    private void jToSelectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToSelectorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToSelecterActionPerformed
+    }//GEN-LAST:event_jToSelectorActionPerformed
+
+    private void jExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jExitButtonActionPerformed
+        // Exit Button Handel
+        int choice = javax.swing.JOptionPane.showConfirmDialog(this,
+                "Exit the Converter?", "Confirm exit",
+                javax.swing.JOptionPane.YES_NO_OPTION);
+        if(choice == javax.swing.JOptionPane.YES_OPTION){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_jExitButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -243,18 +254,18 @@ public class betaCrypto extends javax.swing.JFrame {
     private javax.swing.JTextField jAmountInput;
     private javax.swing.JLabel jAmountLabel;
     private javax.swing.JPanel jButtonPanel;
-    private javax.swing.JToggleButton jConvertButton;
+    private javax.swing.JButton jConvertButton;
     private javax.swing.JTextField jConvertOutput;
     private javax.swing.JLabel jConvertionLabel;
-    private javax.swing.JToggleButton jExitButton;
+    private javax.swing.JButton jExitButton;
     private javax.swing.JLabel jFromLabel;
     private javax.swing.JComboBox<String> jFromSelector;
     private javax.swing.JPanel jInOutPanel;
-    private javax.swing.JToggleButton jResetButton;
+    private javax.swing.JButton jResetButton;
     private javax.swing.JPanel jSelectorPanel;
     private javax.swing.JLabel jTitleLabel;
     private javax.swing.JPanel jTitlePanel;
     private javax.swing.JLabel jToLabel;
-    private javax.swing.JComboBox<String> jToSelecter;
+    private javax.swing.JComboBox<String> jToSelector;
     // End of variables declaration//GEN-END:variables
 }
