@@ -5,7 +5,7 @@
 
 package betaCrypto;
 // Imports 
-import java.math.BigDecimal;
+
 import java.math.RoundingMode;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -14,28 +14,15 @@ public class betaCrypto extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(betaCrypto.class.getName());
     
-    private static final Map<String, BigDecimal> USD_RATES = new LinkedHashMap<>();
-    static {
-        USD_RATES.put("BTC",  new BigDecimal("68000"));
-        USD_RATES.put("ETH",  new BigDecimal("2500"));
-        USD_RATES.put("USDT", new BigDecimal("1"));
-        USD_RATES.put("BNB",  new BigDecimal("600"));
-        USD_RATES.put("SOL",  new BigDecimal("160"));
-        USD_RATES.put("XRP",  new BigDecimal("0.55"));
-        USD_RATES.put("ADA",  new BigDecimal("0.40"));
-        USD_RATES.put("DOGE", new BigDecimal("0.12"));
-        USD_RATES.put("USD",  new BigDecimal("1"));
-        USD_RATES.put("ZAR",  new BigDecimal("0.055"));
-    }
-    private static final String[] CODES = USD_RATES.keySet().toArray(new String[0]);
+    private Converter converter = new Converter();
     
     /**
      * Creates new form betaCrypto
      */
     public betaCrypto() {
         initComponents();
-        jFromSelector.setModel(new javax.swing.DefaultComboBoxModel<>(CODES));
-        jToSelector.setModel(new javax.swing.DefaultComboBoxModel<>(CODES));
+        jFromSelector.setModel(new javax.swing.DefaultComboBoxModel<>(converter.getCodes()));
+        jToSelector.setModel(new javax.swing.DefaultComboBoxModel<>(converter.getCodes()));
         jFromSelector.setSelectedItem("BTC");
         jToSelector.setSelectedItem("USD");
         jConvertOutput.setEditable(false);
@@ -266,37 +253,40 @@ public class betaCrypto extends javax.swing.JFrame {
     }//GEN-LAST:event_jFromSelectorActionPerformed
 
     private void jConvertButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jConvertButtonActionPerformed
-        // TODO add your handling code here:
+        // Convert Button Code
+        
         String text = jAmountInput.getText().trim();
+
+        // Check the input box is not empty
         if (text.isEmpty()) {
-            showError("Enter an amount.");
+            showError("Please enter an amount.");
             return;
         }
+
         try {
-            BigDecimal amount = new BigDecimal(text);
-            if (amount.signum() < 0) {
+            double amount = Double.parseDouble(text);
+
+            // Check the amount is not negative
+            if (amount < 0) {
                 showError("Amount cannot be negative.");
                 return;
             }
+
             String from = (String) jFromSelector.getSelectedItem();
             String to = (String) jToSelector.getSelectedItem();
-            BigDecimal result = convert(amount, from, to);
-            jConvertOutput.setText(result.stripTrailingZeros().toPlainString() + " " + to);
+
+            double result = converter.convert(amount, from, to);
+            jConvertOutput.setText(String.format("%.6f", result) + " " + to);
+
         } catch (NumberFormatException ex) {
-            showError("Amount must be a number, e.g. 0.5 or 100.");
+            showError("Please enter a valid number, e.g. 0.5 or 100.");
         }
-    }
-
-    private BigDecimal convert(BigDecimal amount, String from, String to) {
-        BigDecimal usd = amount.multiply(USD_RATES.get(from));
-        return usd.divide(USD_RATES.get(to), 8, RoundingMode.HALF_UP);
-    }
-
-    private void showError(String msg) {
-        javax.swing.JOptionPane.showMessageDialog(this, msg, "Input error",
-                javax.swing.JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_jConvertButtonActionPerformed
 
+      private void showError(String msg) {
+        javax.swing.JOptionPane.showMessageDialog(this, msg, "Input error",
+                javax.swing.JOptionPane.ERROR_MESSAGE);
+    }
     /**
      * @param args the command line arguments
      */
