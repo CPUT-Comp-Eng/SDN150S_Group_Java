@@ -50,6 +50,7 @@ public class betaCrypto extends javax.swing.JFrame {
         jTitlePanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 30));
 
         jTitleLabel.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jTitleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jTitleLabel.setText("Crypto Currency Converter");
 
         javax.swing.GroupLayout jTitlePanelLayout = new javax.swing.GroupLayout(jTitlePanel);
@@ -163,12 +164,12 @@ public class betaCrypto extends javax.swing.JFrame {
                 .addGap(34, 34, 34)
                 .addGroup(jInOutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jAmountLabel)
-                    .addComponent(jAmountInput, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jAmountInput, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jInOutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jConvertionLabel)
-                    .addComponent(jConvertOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(51, 51, 51))
+                    .addComponent(jConvertOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jConvertionLabel))
+                .addContainerGap())
         );
         jInOutPanelLayout.setVerticalGroup(
             jInOutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -244,7 +245,7 @@ public class betaCrypto extends javax.swing.JFrame {
     private void jConvertButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jConvertButtonActionPerformed
         // Convert Button Code
         
-        String text = jAmountInput.getText().trim();
+        String text = jAmountInput.getText().trim().replace(',', '.'); // comma
 
         // Check the input box is not empty
         if (text.isEmpty()) {
@@ -265,7 +266,7 @@ public class betaCrypto extends javax.swing.JFrame {
             String to = (String) jToSelector.getSelectedItem();
 
             double result = converter.convert(amount, from, to);
-            jConvertOutput.setText(String.format("%.6f", result) + " " + to);
+            jConvertOutput.setText(String.format(java.util.Locale.US, "%,.6f", result) + " " + to); // More precesion 
 
         } catch (NumberFormatException ex) {
             showError("Please enter a valid number, e.g. 0.5 or 100.");

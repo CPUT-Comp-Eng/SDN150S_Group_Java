@@ -1,7 +1,7 @@
 /**
  This is Class for the Converter
  Code extends to be used in betaCrytpo
- 
+ Converts one currency to another
  */
 package betaCrypto;
 public class Converter {
