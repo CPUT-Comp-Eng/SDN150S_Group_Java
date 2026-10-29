@@ -1,6 +1,5 @@
 /**
- *
- * @author rouxtronics
+rouxtronics
 */
 
 package betaCrypto;
