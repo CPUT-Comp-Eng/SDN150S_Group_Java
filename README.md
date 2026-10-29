@@ -14,7 +14,7 @@ Due Date – November 08, 2026
 | **5** | Joshua Isaacs         | 261755692   | [joshuai582-stack](https://github.com/joshuai582-stack)           |                   |
 | **6** | Robert Erady          |             | [robitiii](https://github.com/robitiii)                           |                   |
 | **7** | Sinovuyo Asathi Danca |             | [sinovuyo-asathi-danca](https://github.com/sinovuyo-asathi-danca) |                   |
-| **8** |                       |             |                                                                   |                   |
+| **8** | Motheo Nkadimeng      |             |[motheonkadimeng](https://gitHub.com/motheonkadimeng)              |                   |
 
 ---
 ## Instructions 
