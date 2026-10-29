@@ -254,6 +254,7 @@ public class betaCrypto extends javax.swing.JFrame {
         jFromSelector.setSelectedItem("ZAR");
         jToSelector.setSelectedItem("BTC");
         jAmountInput.requestFocusInWindow();
+        jZarLabel.setText("ZAR value: -");
     }//GEN-LAST:event_jResetButtonActionPerformed
 
     private void jFromSelectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFromSelectorActionPerformed
