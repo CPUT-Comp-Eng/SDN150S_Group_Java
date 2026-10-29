@@ -1,8 +1,7 @@
-package betaCrypto;
-
 /**
- * Holds the currencies and does the conversion maths.
+ This is 
  */
+package betaCrypto;
 public class Converter {
 
     // Currency codes and their value in USD (example rates)
