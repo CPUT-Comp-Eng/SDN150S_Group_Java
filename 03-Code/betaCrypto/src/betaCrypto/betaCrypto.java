@@ -35,15 +35,16 @@ public class betaCrypto extends javax.swing.JFrame {
         jFromSelector = new javax.swing.JComboBox<>();
         jFromLabel = new javax.swing.JLabel();
         jToLabel = new javax.swing.JLabel();
-        jButtonPanel = new javax.swing.JPanel();
-        jExitButton = new javax.swing.JButton();
-        jConvertButton = new javax.swing.JButton();
-        jResetButton = new javax.swing.JButton();
         jInOutPanel = new javax.swing.JPanel();
         jAmountLabel = new javax.swing.JLabel();
         jConvertionLabel = new javax.swing.JLabel();
         jAmountInput = new javax.swing.JTextField();
         jConvertOutput = new javax.swing.JTextField();
+        jZarLabel = new javax.swing.JLabel();
+        jButtonPanel = new javax.swing.JPanel();
+        jExitButton = new javax.swing.JButton();
+        jConvertButton = new javax.swing.JButton();
+        jResetButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -113,6 +114,59 @@ public class betaCrypto extends javax.swing.JFrame {
                 .addGap(155, 155, 155))
         );
 
+        jInOutPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jAmountLabel.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jAmountLabel.setText("Amount:");
+
+        jConvertionLabel.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jConvertionLabel.setText("Conversion:");
+
+        jConvertOutput.addActionListener(this::jConvertOutputActionPerformed);
+
+        jZarLabel.setText("ZAR value: -");
+
+        javax.swing.GroupLayout jInOutPanelLayout = new javax.swing.GroupLayout(jInOutPanel);
+        jInOutPanel.setLayout(jInOutPanelLayout);
+        jInOutPanelLayout.setHorizontalGroup(
+            jInOutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInOutPanelLayout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addGroup(jInOutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jInOutPanelLayout.createSequentialGroup()
+                        .addComponent(jAmountLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jConvertionLabel)
+                        .addGap(104, 104, 104))
+                    .addGroup(jInOutPanelLayout.createSequentialGroup()
+                        .addComponent(jAmountInput, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jConvertOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInOutPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jZarLabel)
+                .addGap(39, 39, 39))
+        );
+        jInOutPanelLayout.setVerticalGroup(
+            jInOutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInOutPanelLayout.createSequentialGroup()
+                .addGroup(jInOutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jInOutPanelLayout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(jAmountLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jInOutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jAmountInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jConvertOutput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jInOutPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jConvertionLabel)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jZarLabel)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+
         jButtonPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jExitButton.setText("Exit");
@@ -133,7 +187,7 @@ public class betaCrypto extends javax.swing.JFrame {
                 .addComponent(jResetButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jConvertButton)
-                .addGap(76, 76, 76)
+                .addGap(83, 83, 83)
                 .addComponent(jExitButton)
                 .addGap(51, 51, 51))
         );
@@ -145,59 +199,22 @@ public class betaCrypto extends javax.swing.JFrame {
                     .addComponent(jResetButton)
                     .addComponent(jConvertButton)
                     .addComponent(jExitButton))
-                .addContainerGap(38, Short.MAX_VALUE))
-        );
-
-        jInOutPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jAmountLabel.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jAmountLabel.setText("Amount:");
-
-        jConvertionLabel.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jConvertionLabel.setText("Conversion:");
-
-        javax.swing.GroupLayout jInOutPanelLayout = new javax.swing.GroupLayout(jInOutPanel);
-        jInOutPanel.setLayout(jInOutPanelLayout);
-        jInOutPanelLayout.setHorizontalGroup(
-            jInOutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jInOutPanelLayout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(jInOutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jAmountLabel)
-                    .addComponent(jAmountInput, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jInOutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jConvertOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jConvertionLabel))
-                .addContainerGap())
-        );
-        jInOutPanelLayout.setVerticalGroup(
-            jInOutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jInOutPanelLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(jInOutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jAmountLabel)
-                    .addComponent(jConvertionLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jInOutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jConvertOutput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jAmountInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jButtonPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jTitlePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jSelectorPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jInOutPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jSelectorPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-            .addComponent(jButtonPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jInOutPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -209,7 +226,8 @@ public class betaCrypto extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jInOutPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jButtonPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(12, 12, 12))
         );
 
         pack();
@@ -267,11 +285,18 @@ public class betaCrypto extends javax.swing.JFrame {
 
             double result = converter.convert(amount, from, to);
             jConvertOutput.setText(String.format(java.util.Locale.US, "%,.6f", result) + " " + to); // More precesion 
+            // Always show the Rand (ZAR) value as well
+            double zarValue = converter.convert(amount, from, "ZAR");
+            jZarLabel.setText("ZAR value: R " + String.format(java.util.Locale.US, "%,.2f", zarValue));
 
         } catch (NumberFormatException ex) {
             showError("Please enter a valid number, e.g. 0.5 or 100.");
         }
     }//GEN-LAST:event_jConvertButtonActionPerformed
+
+    private void jConvertOutputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jConvertOutputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jConvertOutputActionPerformed
 
       private void showError(String msg) {
         javax.swing.JOptionPane.showMessageDialog(this, msg, "Input error",
@@ -298,5 +323,6 @@ public class betaCrypto extends javax.swing.JFrame {
     private javax.swing.JPanel jTitlePanel;
     private javax.swing.JLabel jToLabel;
     private javax.swing.JComboBox<String> jToSelector;
+    private javax.swing.JLabel jZarLabel;
     // End of variables declaration//GEN-END:variables
 }
