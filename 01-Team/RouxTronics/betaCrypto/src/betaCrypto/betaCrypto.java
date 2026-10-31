@@ -5,10 +5,6 @@ rouxtronics
 package betaCrypto;
 // Imports 
 
-import java.math.RoundingMode;
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 public class betaCrypto extends javax.swing.JFrame {
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(betaCrypto.class.getName());
     private Converter converter = new Converter();
@@ -130,38 +126,29 @@ public class betaCrypto extends javax.swing.JFrame {
         jInOutPanel.setLayout(jInOutPanelLayout);
         jInOutPanelLayout.setHorizontalGroup(
             jInOutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jInOutPanelLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInOutPanelLayout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addGroup(jInOutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jInOutPanelLayout.createSequentialGroup()
-                        .addComponent(jAmountLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jConvertionLabel)
-                        .addGap(104, 104, 104))
-                    .addGroup(jInOutPanelLayout.createSequentialGroup()
-                        .addComponent(jAmountInput, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jConvertOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInOutPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jZarLabel)
-                .addGap(39, 39, 39))
+                    .addComponent(jAmountInput, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jAmountLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jInOutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jZarLabel)
+                    .addComponent(jConvertOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jConvertionLabel))
+                .addGap(31, 31, 31))
         );
         jInOutPanelLayout.setVerticalGroup(
             jInOutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jInOutPanelLayout.createSequentialGroup()
-                .addGroup(jInOutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jInOutPanelLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(jAmountLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jInOutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jAmountInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jConvertOutput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jInOutPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jConvertionLabel)))
+                .addGap(8, 8, 8)
+                .addGroup(jInOutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jAmountLabel)
+                    .addComponent(jConvertionLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jInOutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jAmountInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jConvertOutput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jZarLabel)
                 .addContainerGap(18, Short.MAX_VALUE))
