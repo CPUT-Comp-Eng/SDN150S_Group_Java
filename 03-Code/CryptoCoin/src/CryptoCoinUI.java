@@ -44,7 +44,6 @@ public class CryptoCoinUI extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         EndValueLbl = new javax.swing.JLabel();
         EndValueTF = new javax.swing.JTextField();
-        jPanel5 = new javax.swing.JPanel();
         jZarLabel = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         ConvertBtn = new javax.swing.JButton();
@@ -54,13 +53,15 @@ public class CryptoCoinUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jPanel2.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(243, 246, 251));
+
+        jPanel2.setBackground(new java.awt.Color(15, 42, 82));
 
         TitleLbl.setBackground(new java.awt.Color(255, 255, 255));
-        TitleLbl.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        TitleLbl.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        TitleLbl.setForeground(new java.awt.Color(255, 255, 255));
         TitleLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TitleLbl.setText("Currency Converter");
-        TitleLbl.setOpaque(true);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -79,35 +80,40 @@ public class CryptoCoinUI extends javax.swing.JFrame {
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(213, 222, 234)));
 
         AmountLbl.setBackground(new java.awt.Color(255, 255, 255));
-        AmountLbl.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        AmountLbl.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        AmountLbl.setForeground(new java.awt.Color(31, 41, 55));
         AmountLbl.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         AmountLbl.setText("Amount");
         AmountLbl.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        AmountLbl.setOpaque(true);
 
         FromCurrencyLbl.setBackground(new java.awt.Color(255, 255, 255));
-        FromCurrencyLbl.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        FromCurrencyLbl.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        FromCurrencyLbl.setForeground(new java.awt.Color(31, 41, 55));
         FromCurrencyLbl.setText("From Currency");
-        FromCurrencyLbl.setOpaque(true);
 
         ToCurrencyLbl.setBackground(new java.awt.Color(255, 255, 255));
-        ToCurrencyLbl.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        ToCurrencyLbl.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        ToCurrencyLbl.setForeground(new java.awt.Color(31, 41, 55));
         ToCurrencyLbl.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         ToCurrencyLbl.setText("To Currency");
         ToCurrencyLbl.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        ToCurrencyLbl.setOpaque(true);
 
+        InsertedValueTF.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         InsertedValueTF.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        InsertedValueTF.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(213, 222, 234)), javax.swing.BorderFactory.createEmptyBorder(2, 8, 2, 8)));
         InsertedValueTF.setOpaque(true);
         InsertedValueTF.addActionListener(this::InsertedValueTFActionPerformed);
 
+        FromValueCB.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         FromValueCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         FromValueCB.setOpaque(true);
         FromValueCB.addActionListener(this::FromValueCBActionPerformed);
 
+        ToValueCB.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         ToValueCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         ToValueCB.setOpaque(true);
         ToValueCB.addActionListener(this::ToValueCBActionPerformed);
@@ -150,30 +156,25 @@ public class CryptoCoinUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel4.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel4.setBackground(new java.awt.Color(234, 242, 255));
+        jPanel4.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 0, 0, new java.awt.Color(37, 99, 235)));
 
         EndValueLbl.setBackground(new java.awt.Color(255, 255, 255));
-        EndValueLbl.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        EndValueLbl.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        EndValueLbl.setForeground(new java.awt.Color(31, 41, 55));
         EndValueLbl.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         EndValueLbl.setText("Conversion");
         EndValueLbl.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        EndValueLbl.setOpaque(true);
 
+        EndValueTF.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
+        EndValueTF.setForeground(new java.awt.Color(15, 42, 82));
         EndValueTF.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        EndValueTF.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(37, 99, 235)), javax.swing.BorderFactory.createEmptyBorder(0, 8, 0, 8)));
         EndValueTF.setOpaque(true);
         EndValueTF.addActionListener(this::EndValueTFActionPerformed);
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 471, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
+        jZarLabel.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        jZarLabel.setForeground(new java.awt.Color(21, 128, 61));
         jZarLabel.setText("ZAR value: -");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -183,44 +184,45 @@ public class CryptoCoinUI extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(EndValueLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(EndValueTF, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jZarLabel))
                 .addContainerGap())
-            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(EndValueLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26))
+                    .addComponent(EndValueLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(2, 2, 2)
                         .addComponent(EndValueTF, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jZarLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jZarLabel)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel6.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel6.setBackground(new java.awt.Color(243, 246, 251));
 
+        ConvertBtn.setBackground(new java.awt.Color(37, 99, 235));
         ConvertBtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        ConvertBtn.setForeground(new java.awt.Color(255, 255, 255));
         ConvertBtn.setText("Convert");
         ConvertBtn.setOpaque(true);
         ConvertBtn.addActionListener(this::ConvertBtnActionPerformed);
 
+        ResetBtn.setBackground(new java.awt.Color(226, 232, 240));
         ResetBtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        ResetBtn.setForeground(new java.awt.Color(31, 41, 55));
         ResetBtn.setText("Reset");
         ResetBtn.setOpaque(true);
         ResetBtn.addActionListener(this::ResetBtnActionPerformed);
 
+        ExitBtn.setBackground(new java.awt.Color(254, 226, 226));
         ExitBtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        ExitBtn.setForeground(new java.awt.Color(185, 28, 28));
         ExitBtn.setText("Exit");
         ExitBtn.setOpaque(true);
         ExitBtn.addActionListener(this::ExitBtnActionPerformed);
@@ -254,7 +256,7 @@ public class CryptoCoinUI extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(123, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -265,15 +267,15 @@ public class CryptoCoinUI extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addGap(10, 10, 10)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(10, 10, 10)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -282,15 +284,15 @@ public class CryptoCoinUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 489, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addGap(10, 10, 10)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         pack();
@@ -397,7 +399,6 @@ public class CryptoCoinUI extends javax.swing.JFrame {
     javax.swing.JPanel jPanel2;
     javax.swing.JPanel jPanel3;
     javax.swing.JPanel jPanel4;
-    javax.swing.JPanel jPanel5;
     javax.swing.JPanel jPanel6;
     javax.swing.JLabel jZarLabel;
     // End of variables declaration//GEN-END:variables
