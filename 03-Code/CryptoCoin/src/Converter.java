@@ -33,6 +33,9 @@ public class Converter {
 
     //  Code for the conversion - one currency to another
     public double convert(double amount, String from, String to) {
-        return amount * getRate(from) / getRate(to);
+            
+        double inUsd = amount * getRate(from);   // change to USD
+        double result = inUsd / getRate(to);     // change USD to the new currency
+        return result;
     }
 }
