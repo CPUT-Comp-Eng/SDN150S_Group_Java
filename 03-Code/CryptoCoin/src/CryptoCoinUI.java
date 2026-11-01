@@ -23,8 +23,8 @@ public class CryptoCoinUI extends javax.swing.JFrame {
     private void populateCurrencyComboBoxes() {
         FromValueCB.setModel(new javax.swing.DefaultComboBoxModel<>(converter.getCodes()));
         ToValueCB.setModel(new javax.swing.DefaultComboBoxModel<>(converter.getCodes()));
-        FromValueCB.setSelectedItem("ZAR");
-        ToValueCB.setSelectedItem("USD");
+        FromValueCB.setSelectedItem("USD");
+        ToValueCB.setSelectedItem("BTC");
     }
     
     @SuppressWarnings("unchecked")
@@ -297,9 +297,8 @@ public class CryptoCoinUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+//  Inserted Value Text Field
     private void InsertedValueTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InsertedValueTFActionPerformed
-        // TODO add your handling code here:
         ConvertBtnActionPerformed(evt);
     }//GEN-LAST:event_InsertedValueTFActionPerformed
 
@@ -341,7 +340,6 @@ public class CryptoCoinUI extends javax.swing.JFrame {
 
 // Reset Button
     private void ResetBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResetBtnActionPerformed
-        // TODO add your handling code here:
         InsertedValueTF.setText("");
         EndValueTF.setText("");
         jZarLabel.setText("ZAR value: -"); // Added
@@ -360,13 +358,9 @@ public class CryptoCoinUI extends javax.swing.JFrame {
             System.exit(0);
         }
     }//GEN-LAST:event_ExitBtnActionPerformed
-
+    // Main
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+       
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -377,7 +371,7 @@ public class CryptoCoinUI extends javax.swing.JFrame {
         } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
             logger.log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
+       
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new CryptoCoinUI().setVisible(true));
