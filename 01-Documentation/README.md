@@ -4,11 +4,12 @@ Design and reference documentation for the CryptoCoin application.
 
 ## Contents
 
-| File | Purpose |
-|---|---|
-| `Pseudocode.md` | Algorithm pseudocode for conversion and UI logic |
+| File             | Purpose                                               |
+| ---------------- | ----------------------------------------------------- |
+| `Pseudocode.md`  | Algorithm pseudocode for conversion and UI logic      |
 | `Source Code.md` | Walkthrough of classes, methods, and design decisions |
-| `Tool.md` | Tools and technologies used in the project |
+| `Tool.md`        | Tools and technologies used in the project            |
+| `UML diagram.md` | Contain the UML Diagram and Steps to recreate         |
 
 ## Conventions
 
