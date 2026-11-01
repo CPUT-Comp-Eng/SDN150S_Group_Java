@@ -18,7 +18,6 @@ public class Converter {
         switch (code) {
             case "BTC":  return 68000;
             case "ETH":  return 2500;
-            case "USDT": return 1;
             case "BNB":  return 600;
             case "SOL":  return 160;
             case "XRP":  return 0.55;
@@ -26,7 +25,7 @@ public class Converter {
             case "DOGE": return 0.12;
             case "USD":  return 1;
             case "ZAR":  return 0.060;
-            default:     return -1;
+            default:     return 1;
         }
     }
 
