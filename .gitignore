@@ -1,14 +1,26 @@
-# Obsidian config
-.obsidian
+# Java build output
+build/
+dist/
+*.class
+*.jar
+!lib/*.jar
 
-# Trash & System files
-.trash
+# NetBeans per-machine
+nbproject/private/
 
-# Specific project folders
-Private
-/01-Team/LinkCloud/CryptoCoin/build/
-/01-Team/RouxTronics/betaCrypto/nbproject/private/
-/01-Team/LinkCloud/CryptoCoin/nbproject/private/
-/01-Team/RouxTronics/betaCrypto/build/
-/03-Code/CryptoCoin/build/
-/03-Code/CryptoCoin/nbproject/private/
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+*.iml
+.vscode/
+.obsidian/
+
+# Office lock/temp files
+~$*.docx
+.~lock.*#
+
+# Trash / temp
+.trash/
+*.log
+*.tmp
