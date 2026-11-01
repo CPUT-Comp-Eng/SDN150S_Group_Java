@@ -1,5 +1,6 @@
 # 02 — Code
 Java source for the CryptoCoin converter (NetBeans project).
+Coded with **Apache NetBeans IDE 31**
 ## Structure
 
 CryptoCoin/  
