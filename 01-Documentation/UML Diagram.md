@@ -60,8 +60,8 @@ end note
 1. Go to [plantuml.com](https://plantuml.com/)
 2. Paste code in the block 
 
-	![](<Pasted image 20261101192133.png>)
+	![](<./Attachments/Pasted image 20261101192133.png>)
 
 3. Screenshot the code 
 
-![](<Pasted image 20261101192926.png>)
+![](<./Attachments/Pasted image 20261101192926.png>)
