@@ -1,0 +1,14 @@
+@startuml
+actor User
+participant CryptoCoinUI
+participant Converter
+
+User -> CryptoCoinUI: Enters amount, selects From & To, clicks 'Convert'
+CryptoCoinUI -> CryptoCoinUI: Parse & validate input amount
+CryptoCoinUI -> Converter: convert(amount, from, to)
+Converter -> Converter: getRate(from) & getRate(to)
+Converter --> CryptoCoinUI: Returns converted result
+CryptoCoinUI -> Converter: convert(amount, from, "ZAR")
+Converter --> CryptoCoinUI: Returns equivalent ZAR value
+CryptoCoinUI -> User: Updates EndValueTF & jZarLabel
+@enduml

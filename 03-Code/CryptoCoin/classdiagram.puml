@@ -1,0 +1,29 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Converter {
+    - {static} String[] CODES
+    + String[] getCodes()
+    - double getRate(String code)
+    + double convert(double amount, String from, String to)
+}
+
+class CryptoCoinUI {
+    - static Logger logger
+    - Converter converter
+    - javax.swing.JButton ConvertBtn
+    - javax.swing.JTextField EndValueTF
+    - javax.swing.JTextField InsertedValueTF
+    - javax.swing.JComboBox<String> FromValueCB
+    - javax.swing.JComboBox<String> ToValueCB
+    - javax.swing.JLabel jZarLabel
+    + CryptoCoinUI()
+    - void populateCurrencyComboBoxes()
+    - void ConvertBtnActionPerformed(ActionEvent evt)
+    - void ResetBtnActionPerformed(ActionEvent evt)
+    - void ExitBtnActionPerformed(ActionEvent evt)
+    + {static} void main(String[] args)
+}
+
+CryptoCoinUI --> Converter : uses >
+@enduml

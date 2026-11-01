@@ -7,7 +7,7 @@ Authors: Garison Pieters (222535164)
 public class Converter {
     
    // Constant Fiat-Crypto Codes
-   private static final String[] CODES = {"BTC", "ETH", "USDT", "BNB", "SOL",
+   private static final String[] CODES = {"BTC", "ETH","BNB", "SOL",
                                            "XRP", "ADA", "DOGE", "USD", "ZAR"};
  
     public String[] getCodes() {
