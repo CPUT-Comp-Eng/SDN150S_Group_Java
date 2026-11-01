@@ -8,6 +8,7 @@ Design and reference documentation for the CryptoCoin application.
 |---|---|
 | `Pseudocode.md` | Algorithm pseudocode for conversion and UI logic |
 | `Source Code.md` | Walkthrough of classes, methods, and design decisions |
+| `Tool.md` | Tools and technologies used in the project |
 
 ## Conventions
 

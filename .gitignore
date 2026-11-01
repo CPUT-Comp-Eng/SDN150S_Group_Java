@@ -24,3 +24,4 @@ Thumbs.db
 .trash/
 *.log
 *.tmp
+/02-Code/CryptoCoin/nbproject/private/
