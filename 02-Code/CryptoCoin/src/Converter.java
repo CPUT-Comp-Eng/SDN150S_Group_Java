@@ -27,11 +27,11 @@ public class Converter {
             case "DOGE": return 0.12; // Dogecoin
             case "TRX": return 0.12; // TRON
             case "LINK": return 11.35; //Chainlink
-            case "LTC": return 0.12;
+            case "LTC": return 54.94;
             // 2-Fiat-Currency
             case "USD":  return 1;
             case "ZAR":  return 0.060;
-           // default:     return 0;
+            default:     return 1;
         }
     
     }
