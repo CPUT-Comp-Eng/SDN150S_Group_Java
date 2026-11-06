@@ -7,16 +7,16 @@ demonstrating constructors, access modifiers, control statements, and input vali
 
 ---
 ## Team Members
-| Slot | Name | Student No. | GitHub | Contribution |
-| :---: | :--- | :--- | :--- | :--- |
-| **1** | Etienne Roux | 260041637 | [RouxTronics](https://github.com/RouxTronics) | Code, pseudocode |
-| **2** | Garison Pieters | 222535164 | [LinkCloudCT](https://github.com/LinkCloudCT) | GUI, code |
-| **3** | Jonathan Strauss | 260083607 | [JohnnyJoestr](https://github.com/JohnnyJoestr) | UML diagram |
-| **4** | Henning Myburgh | 260403237 | [Henning-apx007](https://github.com/Henning-apx007) | Some code |
-| **5** | Joshua Isaacs | 261755692 | [joshuai582-stack](https://github.com/joshuai582-stack) | – |
-| **6** | Robert Erady Kanegamba | 260273600 | [robitiii](https://github.com/robitiii) | – |
-| **7** | Sinovuyo Asathi Danca | 260554898 | [sinovuyo-asathi-danca](https://github.com/sinovuyo-asathi-danca) | – |
-| **8** | Motheo Nkadimeng | 251142884 | [motheonkadimeng](https://github.com/motheonkadimeng) | – |
+| Slot  | Name                   | Student No. | GitHub                                                            | Contribution                                                             |
+| :---: | :--------------------- | :---------- | :---------------------------------------------------------------- | :----------------------------------------------------------------------- |
+| **1** | Etienne Roux           | 260041637   | [RouxTronics](https://github.com/RouxTronics)                     | Backend Code (Converter.java ), Report, Pseudocode, Research, UML digram |
+| **2** | Garison Pieters        | 222535164   | [LinkCloudCT](https://github.com/LinkCloudCT)                     | Graphical Interface, Backend Code, Report, Research, Video Demo          |
+| **3** | Jonathan Strauss       | 260083607   | [JohnnyJoestr](https://github.com/JohnnyJoestr)                   | UML Diagram Framework                                                    |
+| **4** | Henning Myburgh        | 260403237   | [Henning-apx007](https://github.com/Henning-apx007)               | Some lines of Code                                                       |
+| **5** | Joshua Isaacs          | 261755692   | [joshuai582-stack](https://github.com/joshuai582-stack)           | Report Template                                                          |
+| **6** | Robert Erady Kanegamba | 260273600   | [robitiii](https://github.com/robitiii)                           | Signed the Declaration atleast                                           |
+| **7** | Sinovuyo Asathi Danca  | 260554898   | [sinovuyo-asathi-danca](https://github.com/sinovuyo-asathi-danca) | Signed the Declaration atleast                                           |
+| **8** | Motheo Nkadimeng       | 251142884   | [motheonkadimeng](https://github.com/motheonkadimeng)             | Signed the Declaration atleast                                           |
 
 ---
 ## Project Objective
