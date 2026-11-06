@@ -24,8 +24,8 @@ public class Converter {
             case "SOL":  return 94.50; // Solana
             case "XRP":  return 1.26;
             case "ADA":  return 0.40; //Cardano
-            case "DOGE": return 0.12; // Dogecoin
-            case "TRX": return 0.12; // TRON
+            case "DOGE": return 0.071; // Dogecoin
+            case "TRX": return 0.317; // TRON
             case "LINK": return 11.35; //Chainlink
             case "LTC": return 54.94;
             // 2-Fiat-Currency

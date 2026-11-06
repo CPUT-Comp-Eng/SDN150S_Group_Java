@@ -2,11 +2,18 @@
 > Converter.java File
 
 ```java
+/*
+Description: Currency Converter computation
+Authors: Garison Pieters (222535164)
+         Etienne G. Roux (260041637) 
+ */
+
 public class Converter {
     
    // Constant Fiat-Crypto Codes
-   private static final String[] CODES = {"BTC", "ETH", "USDT", "BNB", "SOL",
-                                           "XRP", "ADA", "DOGE", "USD", "ZAR"};
+   private static final String[] CODES = {"BTC", "ETH", "BNB", "SOL","XRP",
+                                           "ADA", "DOGE", "TRX","LINK","LTC", 
+                                           "USD", "ZAR"};
  
     public String[] getCodes() {
         return CODES;
@@ -14,18 +21,23 @@ public class Converter {
     // Return Values for The Crypto - Ratio(Currency/USD = Return)
       private double getRate(String code) {
         switch (code) {
-            case "BTC":  return 68000;
-            case "ETH":  return 2500;
-            case "USDT": return 1;
-            case "BNB":  return 600;
-            case "SOL":  return 160;
-            case "XRP":  return 0.55;
-            case "ADA":  return 0.40;
-            case "DOGE": return 0.12;
+            // 10-Crypto-Currency
+            case "BTC":  return 77962.69; // Bitcoin
+            case "ETH":  return 2287.69; // Ethereum
+            case "BNB":  return 702.63; // Binance Coin
+            case "SOL":  return 94.50; // Solana
+            case "XRP":  return 1.26;
+            case "ADA":  return 0.40; //Cardano
+            case "DOGE": return 0.071; // Dogecoin
+            case "TRX": return 0.317; // TRON
+            case "LINK": return 11.35; //Chainlink
+            case "LTC": return 54.94;
+            // 2-Fiat-Currency
             case "USD":  return 1;
             case "ZAR":  return 0.060;
-            default:     return -1;
+            default:     return 1;
         }
+    
     }
 
 
@@ -40,17 +52,17 @@ public class Converter {
 ```
 This class does the maths. It has no buttons or windows.
 
-1. `CODES`: Variable name for the array of 10 currencies (2 Fiat and 8 Crypto). 
+1. `CODES`: Variable name for the array of 12 currencies (2 Fiat and 10 Crypto). 
 	- `static final` makes `CODES` a constant
 2. `getCodes()`: lets other classes read the list, since the array is `private`.
 3. `getRate(code)`: returns the USD value of 1 unit of that currency. 
-	- for example 1 BTC = 68000 USD.
-4. `default: return -1`: returned for an unknown code.
+	- for example 1 BTC = 77962.69 USD.
+4. `default: return 1`: returned for an unknown code.
 5.  `convert(...)`: converts through USD in two steps.
 	- Amount × rate of `from` gives USD.
 	- USD ÷ rate of `to` gives the result.
 
- **Example**: 1 ETH to BTC = (1 × 2500) ÷ 68000 = 0.03676471.
+ **Example**: 1 ETH to BTC = (1 × 2287.69) ÷ 77962.69 
 
 **Limitations:**
 - The currency values are fixed.
@@ -147,7 +159,7 @@ Runs when Convert is clicked.
    private void ResetBtnActionPerformed(java.awt.event.ActionEvent evt) {                             
         InsertedValueTF.setText("");
         EndValueTF.setText("");
-        jZarLabel.setText("ZAR value: -"); // Added
+        jZarLabel.setText("ZAR value: -"); // Clears the ZAR Value label
         FromValueCB.setSelectedItem("USD");
         ToValueCB.setSelectedItem("BTC");
         InsertedValueTF.requestFocus();

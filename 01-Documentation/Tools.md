@@ -3,15 +3,16 @@
 Tools and technologies used throughout the SDN150S group project,
 mapped to the task each supported.
 
-| Tool | Version / Link | Purpose |
-|---|---|---|
-| **Apache NetBeans IDE** | 31 — [netbeans.apache.org](https://netbeans.apache.org/) | Primary Java IDE — writing, compiling, and running the Swing application; used the NetBeans Form Editor to build `CryptoCoinUI.form` |
-| **Java (JDK)** | (from NetBeans installation) | Language and runtime for the converter application |
-| **Git** | [git-scm.com](https://git-scm.com/) | Local version control — commits, branches, merges |
-| **GitHub** | [github.com](https://github.com/) | Remote repository hosting, pull requests, code review, and submission |
-| **PlantUML** | [plantuml.com](https://plantuml.com/) | UML class / activity diagrams for the report — text-based, version-controllable diagram source |
-| **Obsidian** | [obsidian.md](https://obsidian.md/) | Markdown note-taking for pseudocode, documentation drafts, and project planning |
-| **Microsoft Word / OnlyOffice** | — | Technical report authoring and export to PDF (Cabri/Calibri 11, 1.5 line spacing, Harvard citations) |
+| Tool                            | Version / Link                                           | Purpose                                                                                                                              |
+| ------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| **Apache NetBeans IDE**         | 31 — [netbeans.apache.org](https://netbeans.apache.org/) | Primary Java IDE — writing, compiling, and running the Swing application; used the NetBeans Form Editor to build `CryptoCoinUI.form` |
+| **Java (JDK)**                  | (from NetBeans installation)                             | Language and runtime for the converter application                                                                                   |
+| **Git**                         | [git-scm.com](https://git-scm.com/)                      | Local version control — commits, branches, merges                                                                                    |
+| **GitHub**                      | [github.com](https://github.com/)                        | Remote repository hosting, pull requests, code review, and submission                                                                |
+| **PlantUML**                    | [plantuml.com](https://plantuml.com/)                    | UML class / activity diagrams for the report — text-based, version-controllable diagram source                                       |
+| **Obsidian**                    | [obsidian.md](https://obsidian.md/)                      | Markdown note-taking for pseudocode, documentation drafts, and project planning                                                      |
+| **Microsoft Word / OnlyOffice** | —                                                        | Technical report authoring and export to PDF (Cabri/Calibri 11, 1.5 line spacing, Harvard citations)                                 |
+| Whatsapp                        |                                                          | For Team Communication                                                                                                               |
 
 ## Notes
 

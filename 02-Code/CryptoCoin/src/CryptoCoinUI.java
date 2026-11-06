@@ -342,7 +342,7 @@ public class CryptoCoinUI extends javax.swing.JFrame {
     private void ResetBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResetBtnActionPerformed
         InsertedValueTF.setText("");
         EndValueTF.setText("");
-        jZarLabel.setText("ZAR value: -"); // Added
+        jZarLabel.setText("ZAR value: -"); // Clears the ZAR Value label
         FromValueCB.setSelectedItem("USD");
         ToValueCB.setSelectedItem("BTC");
         InsertedValueTF.requestFocus();
