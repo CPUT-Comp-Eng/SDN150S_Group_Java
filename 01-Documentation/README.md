@@ -11,6 +11,7 @@ Design and reference documentation for the CryptoCoin application.
 | `Tool.md`        | Tools and technologies used in the project            |
 | `UML diagram.md` | Contain the UML Diagram and Steps to recreate         |
 
+
 ## Conventions
 
 - Markdown only — plain `.md` files, no proprietary formats.

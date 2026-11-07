@@ -17,7 +17,7 @@ demonstrating constructors, access modifiers, control statements, and input vali
 | **6** | Robert Erady Kanegamba | 260273600   | [robitiii](https://github.com/robitiii)                           | Signed the Declaration atleast                                           |
 | **7** | Sinovuyo Asathi Danca  | 260554898   | [sinovuyo-asathi-danca](https://github.com/sinovuyo-asathi-danca) | Signed the Declaration atleast                                           |
 | **8** | Motheo Nkadimeng       | 251142884   | [motheonkadimeng](https://github.com/motheonkadimeng)             | Signed the Declaration atleast                                           |
-
+> Repo: https://github.com/CPUT-Comp-Eng/SDN150S_Group_Java.git
 ---
 ## Project Objective
 Design a Java program that converts **10 cryptocurrency pairs**
